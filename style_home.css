@@ -1,0 +1,570 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+}
+.header {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.header .navbar {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 80%;
+	height: 80px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+.header .navbar .logo {
+	width: 90px;
+	height: 60px;
+}
+.header .navbar img {
+	width: 100%;
+}
+.header .navbar ul {
+
+}
+.header .navbar ul li {
+	margin: 0 20px;
+	list-style-type: none;
+}
+.header .navbar ul li a {
+	text-decoration: none;
+	color: white;
+	line-height: 80px;
+	transition: color 0.5s;
+}
+.header .navbar ul li a:hover {
+	color: #f8d000;
+	transition: color 0s;
+}
+.header .carousel {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.header ul {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.header ul li {
+	list-style-type: none;
+}
+.header .slide {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	filter: opacity(0);
+	transition: filter 0.5s;
+}
+.header ul li input[type="radio"] {
+	position: relative;
+	z-index: 10;
+	width: 20px;
+	height: 20px;
+	-webkit-appearance: none;
+	margin: 40px 5px;
+}
+.header ul li input[type="radio"]:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	border-radius: 50%;
+	transition: 0.5s;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.header ul li input[type="radio"]:checked ~ .slide {
+	filter: opacity(1);
+	transition: filter 0.5s;
+}
+.header ul li input[type="radio"]:checked:after {
+	background: #ffd868;
+}
+.header .slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+.about {
+	width: 80%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: center;
+}
+.about .office {
+	width: 50%;
+	padding: 50px 0;
+}
+.about .office img {
+	width: 100%;
+}
+.about .info 
+{
+	position: relative;
+	width: 50%;
+	padding: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+.about .info h2 {
+	font-size: 28px;
+}
+.about .para {
+	
+}
+.about .para p{
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-align: justify;
+	line-height: 20px;
+}
+.about .btn { 
+	width: 80px;
+	height: 40px;
+	border: 1px solid #f8d000;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+.about .btn:hover {
+	background: #f8d000;
+}
+.about .btn a {
+	text-decoration: none;
+	color: #e81820;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.services {
+	position: relative;
+	top: 0;
+	width: 80%;
+	height: 100vh;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.services .head {
+	margin-bottom: 50px 0 ;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.services .head h2 {
+	display: inline-block;
+	font-size: 28px;
+	text-align: center;
+}
+.services .head h4 {
+	display: inline-block;
+	text-align: center;
+	font-size: 12px;
+	letter-spacing: 1px;
+	color: rgba(0,0,0,0.5);
+	text-transform: capitalize;
+}
+.services div ul {
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.services div ul li {
+	list-style-type: none;
+	width: 33%;	
+}
+.services div ul li .card {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	background: #e81820;
+	margin: 20px;
+	cursor: pointer;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.services div ul li .card div {
+	background: #e81820;
+}
+.services div ul li .card img {
+	width: 50%;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.services div ul li .card h2 {
+	margin: 10px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	letter-spacing: 1px;
+}
+.services .back {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 100%;
+	height: 240px;
+	background: #f8d000;
+}
+
+.school {
+	width: 80%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.school .head {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 50px 0;
+}
+.school .head h2 {
+	text-align: center;
+	font-size: 28px;
+}
+.school .head h4 {
+	font-size: 12px;
+	letter-spacing: 1px;
+	color: rgba(0,0,0,0.5);
+	text-transform: capitalize;
+}
+.school .list ul {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.school .list ul li {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+.school .list ul li div img {
+	width: 200px;
+	height: 200px;
+}
+.school .list ul li .info {
+	padding: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.school .list ul li .info h2 {
+	display: inline-block;
+	text-align: left;
+	font-size: 24px;
+	color: #e81820;
+}
+.school .list ul li .info p {
+	margin-top: 10px;
+	display: inline-block;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-align: justify;
+}
+.school .more {
+	margin: 50px 0;
+	width: 80px;
+	height: 40px;
+	border: 1px solid #f8d000;
+	text-align: center;
+	line-height: 38px;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+.school .more a {
+	text-decoration: none;
+	color: #e81820;
+}
+.school .more:hover {
+	background: #f8d000;
+	transition: 0s;
+}
+
+.student {
+	padding: 50px 0;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background: #f8d000;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 50px;
+}
+.student .head {
+	width: 80%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+.student .head h2 {
+	font-size: 36px;
+	color: #fff;
+}
+.student .head h4 {
+	margin-top: 10px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	color: #e81820;
+	text-transform: capitalize;
+}
+.student .comment {
+	width: 100%;
+	margin-top: 40px;
+}
+.student .comment ul{
+	position: relative;
+	width: 80%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	display: flex;
+	justify-content: space-between;
+}
+.student ul li {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	list-style-type: none;
+	background: #fff;
+	padding: 60px 20px 20px 20px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+.student .stucom p {
+	padding: 0 20px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+.student ul li .stuimg {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+	padding: 20px 0;
+}
+.student ul li .stuimg img {
+	margin: 20px 0;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+.student .stuimg h2 {
+	font-size: 20px;
+	color: rgba(0,0,0,0.7);
+}
+
+.mail {
+	background: #f0f0f0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.mail .form{
+	margin: 50px 0;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+.mail .form div {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 50px;
+}
+.mail .form .head {
+	background: #e81820;
+}
+.mail .form .head h2 {
+	text-transform: capitalize;
+	font-size: 40px;
+	color: #fff;
+}
+.mail .form .reg {
+	padding: 20px 50px;
+	display: flex;
+	background: #fff;
+}
+.mail .form .reg h2 {
+	margin-bottom: 10px;
+}
+.mail .form .reg form {
+	margin-top: 10px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.mail .form .reg form label {
+	font-size: 12px;
+	margin: 5px 0;
+}
+.mail .form .reg form input {
+	border: none;
+	border-bottom: 1px solid #f8d000;
+	width: 100%;
+	height: 30px;
+	font-size: 16px;
+	padding: 0 10px;
+}
+.mail .form .reg form input:focus {
+	outline: none;
+	background: none;
+}
+.mail .form .reg form button {
+	margin-top: 10px;
+	width: 80px;
+	height: 40px;
+	border: none;
+	background: #e81820;
+	color: #fff;
+	font-size: 16px;
+	cursor: pointer;
+}
+.mail .form .reg form button:hover {
+	color: #f8d000;
+}
+.footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: #263238;
+}
+.footer .top {
+	margin-top: 50px;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.footer .top .logo {
+	width: 90px;
+	height: 60px;
+}
+.footer .top .logo img {
+	width: 100%;
+}
+.footer .top .help h2 {
+	font-size: 18px;
+	color: #f8d000;
+}
+.footer .top .help ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.footer .top .help ul li {
+	display: inline-block;
+	list-style-type: none;
+}
+.footer .top .help ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 12px;
+	transition: color 0.5s;
+}
+
+.footer .top .follow h2{
+ 	color: #f8d000;
+ 	font-size: 18px;
+}
+.footer .top .follow ul li {
+	list-style-type: none;
+}
+.footer .top .follow ul li a {
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+	transition: color 0.5s;
+}
+.footer .top .add h2{
+ 	color: #f8d000;
+ 	font-size: 18px;
+}
+.footer .top .add ul li {
+	list-style-type: none;
+}
+.footer .top .add ul li {
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+}
+.footer .copy {
+	margin: 50px 0;
+}
+.footer .top h2 {
+	margin-bottom: 10px;
+}
+.footer .top ul li {
+	line-height: 20px;
+}
+.footer .top ul li a:hover {
+	transition: color 0s;
+	color: #e81820;
+}
+.footer .copy {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin: 50px 0;
+	width: 80%;
+}
+.footer .copy p{
+	text-align: right;
+	color: #fff;
+	font-size: 12px;
+}
